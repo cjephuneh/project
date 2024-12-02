@@ -45,7 +45,10 @@ jobs:
           action: "upload"
           app_location: "/"  # Root directory of your app's source code
           api_location: ""  # If you have an API, set its path here; otherwise, leave it empty
-          output_location: "build"  # This should be the directory where your app's build files are located
+          output_location: "build"  # For React, this should be 'build'
+          # If using Vue or Angular, update this line to match:
+          # output_location: "dist"  # For Vue.js, use 'dist'
+          # output_location: "dist/your-app-name"  # For Angular, use 'dist/your-app-name'
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
