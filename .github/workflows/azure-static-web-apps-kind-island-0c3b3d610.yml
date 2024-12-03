@@ -1,0 +1,60 @@
+name: Azure Static Web Apps CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+
+jobs:
+  build_and_deploy_job:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and Deploy Job
+    steps:
+      # Step 1: Checkout the code
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          lfs: false
+      
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Use the appropriate version for your project
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+      
+      # Step 4: Build the app (Make sure the dist folder is created)
+      - name: Build the app
+        run: npm run build  # Run the build command for your project (React, Angular, etc.)
+
+      # Step 5: Deploy to Azure Static Web Apps
+      - name: Build and Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_ISLAND_0C3B3D610 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}  # Used for GitHub integrations (i.e. PR comments)
+          action: "upload"
+          app_location: "/"  # Root directory of your app's source code
+          api_location: ""  # If you have an API, set its path here; otherwise, leave it empty
+          output_location: "dist"  # Updated to match the output folder for your app (dist in this case)
+
+  close_pull_request_job:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    name: Close Pull Request Job
+    steps:
+      - name: Close Pull Request
+        id: closepullrequest
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_ISLAND_0C3B3D610 }}
+          action: "close"
