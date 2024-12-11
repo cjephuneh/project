@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import logoImage from '../../assets/footer (1).jpg';
+import footerImage from '../../assets/footer (1).jpg';
 
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <img src={logoImage} alt="Virtual CC Logo" className="h-10 w-auto sm:h-12 sm:w-48 max-w-full" />
+            <img src={footerImage} alt="CC" className="max-h-40 max-w-full object-contain" />
             </Link>
             <p className="text-sm">
               Transforming business communication through innovative technology solutions.
