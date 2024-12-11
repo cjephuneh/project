@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Globe2, Zap, Shield, Users } from 'lucide-react';
 
@@ -32,7 +31,7 @@ const Hero = () => {
             <Globe2 className="h-20 w-20 text-blue-400" />
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-8">
             ELEVATING
             <span className="block bg-gradient-to-r from-blue-400 to-indigo-400 text-transparent bg-clip-text">
               COMMUNICATION
