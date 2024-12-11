@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img src={logoImage} alt="Virtual CC Logo" className="h-24 w-12 sm:h-20 sm:w-72 max-w-full" />
+              <img src={logoImage} alt="Virtual CC Logo" className="h-24 w-auto sm:h-20 sm:w-auto max-w-full" />
             </Link>
           </div>
 
