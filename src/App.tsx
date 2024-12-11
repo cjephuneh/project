@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
-import Stats from './components/Stats';
+// import Stats from './components/Stats';
 import Features from './components/Features';
 import Services from './components/Services';
 import CoreValues from './components/CoreValues';
@@ -24,7 +24,7 @@ function App() {
             <Route path="/" element={
               <>
                 <Hero />
-                <Stats />
+                {/* <Stats /> */}
                 <Features />
                 <Services />
                 <CoreValues />

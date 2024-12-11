@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Globe2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logoImage from '../../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img src="../../assets/logo.png" alt="Virtual CC Logo" className="h-8 w-8" />
+              <img src={logoImage} alt="Virtual CC Logo" className="h-12 w-48 sm:h-16 sm:w-auto max-w-full" />
             </Link>
           </div>
 
