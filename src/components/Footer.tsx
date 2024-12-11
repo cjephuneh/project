@@ -1,6 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Globe2, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import logoImage from '../../assets/logo.png';
+
 
 const Footer = () => {
   return (
@@ -10,8 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <Globe2 className="h-8 w-8 text-blue-500" />
-              <span className="text-xl font-bold text-white">Virtual CC</span>
+              <img src={logoImage} alt="Virtual CC Logo" className="h-10 w-auto sm:h-12 sm:w-48 max-w-full" />
             </Link>
             <p className="text-sm">
               Transforming business communication through innovative technology solutions.
@@ -52,15 +52,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-500" />
-                <span>info@virtualcc.com</span>
+                <span>info@virtualglobal.net</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-500" />
-                <span>+1 (555) 123-4567</span>
+                <span>+254788144252</span>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-blue-500" />
-                <span>123 Business Ave, Tech City, TC 12345</span>
+                <span>Nairobi, Kenya</span>
               </li>
             </ul>
           </div>
