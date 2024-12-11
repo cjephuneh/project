@@ -11,8 +11,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Globe2 className="h-8 w-8 text-blue-600" />
-              <span className="font-bold text-xl">Virtual CC</span>
+              <img src="../../assets/logo.png" alt="Virtual CC Logo" className="h-8 w-8" />
             </Link>
           </div>
 
