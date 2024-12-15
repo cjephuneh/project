@@ -8,19 +8,19 @@ const testimonials = [
     quote: "Virtual CC transformed our communication infrastructure. Their expertise and dedication to excellence are unmatched.",
     author: "Sarah Johnson",
     position: "CTO, TechCorp",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150"
+    // image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150"
   },
   {
     quote: "The team's innovative solutions helped us streamline operations and boost productivity across our global offices.",
     author: "Michael Chen",
     position: "Operations Director, GlobalTech",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150"
+    // image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&h=150"
   },
   {
     quote: "Their cloud solutions have revolutionized how we handle remote work. Couldn't be happier with the results.",
     author: "Emily Rodriguez",
     position: "CEO, InnovateCo",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150"
+    // image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150"
   }
 ];
 
@@ -57,11 +57,11 @@ const Testimonials = () => {
               <Quote className="absolute top-4 right-4 h-8 w-8 text-blue-100" />
               <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
               <div className="flex items-center">
-                <img
+                {/* <img
                   src={testimonial.image}
                   alt={testimonial.author}
                   className="w-12 h-12 rounded-full mr-4 object-cover"
-                />
+                /> */}
                 <div>
                   <div className="font-semibold text-gray-900">{testimonial.author}</div>
                   <div className="text-sm text-gray-500">{testimonial.position}</div>
